@@ -2297,3 +2297,178 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.Gallery #Gallery-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.Gallery #Gallery-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #313030;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+.Gallery #Gallery-flters li:hover,
+.Gallery #Gallery-flters li.filter-active {
+  color: #ff5821;
+  background: #fff1ed;
+}
+
+.Gallery #Gallery-flters li:last-child {
+  margin-right: 0;
+}
+
+.Gallery .Gallery-item {
+  margin-bottom: 30px;
+}
+
+.Gallery .Gallery-item .Gallery-info {
+  opacity: 0;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+}
+
+.Gallery .Gallery-item .Gallery-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #473d3a;
+}
+
+.Gallery .Gallery-item .Gallery-info p {
+  color: #7f6d68;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.Gallery .Gallery-item .Gallery-info .preview-link,
+.Gallery .Gallery-item .Gallery-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #635551;
+}
+
+.Gallery .Gallery-item .Gallery-info .preview-link:hover,
+.Gallery .Gallery-item .Gallery-info .details-link:hover {
+  color: #ff5821;
+}
+
+.Gallery .Gallery-item .Gallery-info .details-link {
+  right: 10px;
+}
+
+.Gallery .Gallery-item .Gallery-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+
+.Gallery .Gallery-item .Gallery-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.Gallery .Gallery-item .Gallery-links a:hover {
+  color: #ffa587;
+}
+
+.Gallery .Gallery-item:hover .Gallery-info {
+  opacity: 1;
+  bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+# Gallery Details
+--------------------------------------------------------------*/
+.Gallery-details {
+  padding-top: 20px;
+}
+
+.Gallery-details .Gallery-details-slider img {
+  width: 100%;
+}
+
+.Gallery-details .Gallery-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.Gallery-details .Gallery-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #ff5821;
+}
+
+.Gallery-details .Gallery-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ff5821;
+}
+
+.Gallery-details .Gallery-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(71, 61, 58, 0.08);
+}
+
+.Gallery-details .Gallery-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.Gallery-details .Gallery-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.Gallery-details .Gallery-info ul li+li {
+  margin-top: 10px;
+}
+
+.Gallery-details .Gallery-description {
+  padding-top: 30px;
+}
+
+.Gallery-details .Gallery-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.Gallery-details .Gallery-description p {
+  padding: 0;
+}
