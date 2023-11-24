@@ -221,7 +221,7 @@
   });
 
   /**
-   * Porfolio isotope and filter
+   * Gallery isotope and filter
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
@@ -285,6 +285,62 @@
       once: true,
       mirror: false
     })
+  });
+
+
+  /**
+   * Gallery isotope and filter
+   */
+  window.addEventListener('load', () => {
+    let GalleryContainer = select('.Gallery-container');
+    if (GalleryContainer) {
+      let GalleryIsotope = new Isotope(GalleryContainer, {
+        itemSelector: '.Gallery-item',
+        layoutMode: 'fitRows'
+      });
+
+      let GalleryFilters = select('#Gallery-flters li', true);
+
+      on('click', '#Gallery-flters li', function(e) {
+        e.preventDefault();
+        GalleryFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        GalleryIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        GalleryIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  });
+
+  /**
+   * Initiate Gallery lightbox 
+   */
+  const GalleryLightbox = GLightbox({
+    selector: '.Gallery-lightbox'
+  });
+
+  /**
+   * Gallery details slider
+   */
+  new Swiper('.Gallery-details-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
   });
 
 })()
