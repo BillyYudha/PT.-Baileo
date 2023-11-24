@@ -404,7 +404,7 @@ h6 {
 #hero {
   width: 100%;
   height: 60vh;
-  background: url("/Users/user/AL/Baileo P/PT.-Baileo/assets/img/background/bg.jpg") center center;
+  background: url("../img/hero-bg.jpg") center center;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -2471,4 +2471,9 @@ section {
 
 .Gallery-details .Gallery-description p {
   padding: 0;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
 }
